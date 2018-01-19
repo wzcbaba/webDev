@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>注册页面</title>
+<style type="text/css">
+body{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	line-height:20px;
+}
+.main{
+	width:525px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+.hr_1 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #3275c3;
+	height: 35px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #3275c3;
+	vertical-align:bottom;
+	padding-left:12px;}
+.left{
+	text-align:right;
+	width:80px;
+	height:25px;
+	padding-right:5px;}
+	
+.center{width:135px;}
+.inputClass{
+	width:130px;
+	height:16px;
+	border:solid 1px #79abea;}
+div{color:#f00;}	
+</style><!-- -->
+<script type="text/javascript">
+function $(elementId){
+  return document.getElementById(elementId);
+	}
+/*验证*/
+function checkUser(){
+	var user;
+	user=$("user").value;			//变量					
+	//user="王哲";					age=23;price=34.5
+	//变量命名规则：
+	/*	变量名必须以字母或下划线（"_"）开头
+		变量可以包含数字、从 A 至 Z 的大小写字母
+		JavaScript 区分大小写
+ 	*/
+	/*
+		Object类型:对象类型，其中若对象不存在则取值为null   user=$("user1"),userId.innerHTML=user;  typeof(user);
+	*/
+	var userId=$("user_prompt");
+	userId.innerHTML=user;
+	var pwd=$("pwd").value;
+  	var pwdId=$("pwd_prompt");
+   	pwdId.innerHTML=pwd;					//typeof(parseInt(pwd));   isNaN   NaN		
+											//string(数值)  
+	var repwd=$("repwd").value;
+  	var repwdId=$("repwd_prompt");
+   	repwdId.innerHTML=repwd;
+   	var email=$("email").value;
+  	var email_prompt=$("email_prompt");
+  	email_prompt.innerHTML=email;
+}
+
+
+</script>
+</head>
+
+<body>
+<table class="main" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="images/logo.jpg" width="150" height="57" alt="logo" /><img src="images/banner.jpg" width="375" height="57" alt="banner" /></td>
+  </tr>
+  <tr>
+    <td class="hr_1">新用户注册</td>
+  </tr>
+  <tr>
+    <td style="height:10px;"></td>
+  </tr>
+  <form action="" method="post" name="myform" >
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="left">用户名：</td>
+    <td class="center"><input id="user" type="text" class="inputClass" /></td>
+    <td><div id="user_prompt"></div></td>
+  </tr>
+  <tr>
+    <td class="left">密码：</td>
+    <td class="center"><input id="pwd" type="password" class="inputClass" /></td>
+    <td><div id="pwd_prompt"></div></td>
+  </tr>
+  <tr>
+    <td class="left">确认密码：</td>
+    <td class="center"><input id="repwd" type="password" class="inputClass" /></td>
+    <td><div id="repwd_prompt"></div></td>
+  </tr>
+   <tr>
+    <td class="left">电子邮箱：</td>
+    <td class="center"><input id="email" type="text" class="inputClass" /></td>
+    <td><div id="email_prompt"></div></td>
+  </tr>
+   <tr>
+     <td class="left">&nbsp;</td>
+     <td class="center"><input name="" type="button" onclick="checkUser();" value="注册" /></td>
+     <td>&nbsp;</td>
+   </tr>
+</table>
+</td>
+  </tr>
+  </form>
+</table>
+
+</body>
+</html>
